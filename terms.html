@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Alexei - web design & digital words </title>
+<link rel="stylesheet" href="bg.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+<script>
+// Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 100;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+
+</script>
+
+
+
+<div class="header">
+  <h1 style="font-size:40px;">Terms of collaborations</h1>
+  <p>This is a general term agreement. All my collaborations have its written terms on a legal basis - intelectual propery contract. Fell free to ask and discuss! There's always room for good questions and there are plenty of design solutions, for all tastes and budgets! <strong style="font-size:30px;"><a href="mailto:chilomalexandra8@gmail.com">Here we can chat!</a></strong> </p>
+<br>
+
+<p><strong><a href="indexA.html"> Back to main page</a></strong></a>
+<br>
+<br>
+<h2> General Terms of Collaboration Agreement</h2>
+<p id="contract">
+
+<p>The parties agree to the following terms and conditions:</p>
+
+<h3> 1. Scope of Work</h3>
+<p>The Web Designer agrees to provide web design services for the Client as outlined in the attached project proposal or brief (custom made for each offert). The scope of work may include, but is not limited to, website design, development, graphic design, and any other services specified in custom files.</p>
+
+<h3> 2. Timeline </h3>
+<p>The Web Designer will deliver the services according to the timeline agreed upon by both parties. The estimated project start date is [Start Date], and the estimated completion date is [End Date]. Any changes to the timeline must be agreed upon in writing by both parties.</p>
+
+<h3> 3. Payment Terms</h3>
+<p>- Fee Structure: The total cost for the services is negociated by both parts, payable as follows:
+  - 25% deposit upon signing this Agreement.
+  - 25% upon first agreed draft(website structure/ graphic main elements).
+  - 25% upon first agreed content.
+  - 25% upon completion of the project.
+
+<p>- Additional Costs: Any additional costs incurred, such as stock images, fonts, or third-party services, must be approved by the Client in advance and will be billed separately.</p>
+
+<h3> 4. Intellectual Property</h3>
+<p>- Ownership: Upon full payment, the Client will own the rights to the final designs and deliverables produced by the Web Designer. The Web Designer retains the right to use the work in their portfolio and for promotional purposes.</p>
+<p>- License to Use:The Web Designer grants the Client a non-exclusive, perpetual, and worldwide license to use, display, and modify the deliverables for their intended purpose.</p>
+<p>- Third-Party Materials:If the project includes materials subject to third-party intellectual property rights (e.g., stock photos, fonts), the Web Designer will ensure that the Client has the necessary licenses to use these materials. The Client is responsible for complying with the terms of these third-party licenses.</p>
+
+ <h3>5. Revisions</h3>
+<p>The Client is entitled to three rounds of revisions to the design concepts. Any additional revisions beyond this will be billed at the rate of 50 euro per hour.</p>
+
+
+<h3> 6. Confidentiality</h3>
+<p>The Web Designer agrees to keep all confidential information disclosed by the Client during the course of the project confidential. This includes, but is not limited to, business strategies, financial information, and proprietary designs.</p>
+
+
+<h3> 7. Dispute Resolution</h3>
+<p>Any disputes arising under this Agreement will be resolved through good faith negotiation. If the parties cannot resolve the dispute, they agree to submit to mediation before pursuing any other legal remedies.</p>
+
+
+</div>
+
+
+<footer>
+  <p>All rights reserved by Alexei. <a href="mailto:chilomalexandra8@gmail.com"><strong>See you in the next project!</strong></a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Alexei - web design & digital words </title>
+<link rel="stylesheet" href="bg.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+<script>
+// Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 100;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+
+</script>
+
+
+
+<div class="header">
+  <h1 style="font-size:40px;">About me. Main focus on professional path</h1>
+  <p> <strong>Plenty of creative work in online environment, so I could not choose just one! Take a look! A sight to things I like to do as I climb to my professional path.</strong></p>
+
+
+
+<p><strong style="font-size:30px;"><a href="mailto:chilomalexandra8@gmail.com">Here we can chat!</a></strong> </p>
+<br>
+<p><strong><a href="indexA.html"> Back to main page</a></strong></a>
+<br>
+<br>
+
+
+<p id="contract">
+
+<h3>Web design</h3>
+<p>Passionate Frontend Developer with over 2 years of experience in web design and development, specializing in creating responsive, user-friendly websites from design prototypes. Proficient in WordPress, HTML, CSS, and JavaScript, with a solid understanding of UI/UX principles. Experienced in working with Git and GitHub, collaborating with cross-functional teams, and maintaining clear project documentation. Adept at translating AdobeXD (or similar) designs into functional, visually appealing web pages. </p>
+
+<h3> Graphic design </h3>
+<p>Proficient in Adobe Photoshop, Illustrator, InDesign, Adobe Animate CC and experienced in large format printing, image blending, and asset creation.  Skilled in managing multiple projects under tight deadlines while maintaining a commitment to delivering high-quality work. </p>
+
+<h3> Digital marketing </h3>
+<p>Strategic and results-driven Marketing Communication Specialist with over 5 years of experience in developing and executing effective marketing communication strategies. Adept at managing social media, digital marketing, and e-marketing campaigns with a strong background in copywriting, content creation, and data analysis. Proficient in HTML, Salesforce, Hootsuite, and Drupal CMS, with hands-on experience in Adobe InDesign, Photoshop, and Illustrator. Recently completed a Digital Marketing course at Link Academy School, enhancing expertise in the latest marketing trends and tools. Committed to delivering high-quality work under tight deadlines and thriving in a fast-paced, international team environment.</p>
+
+<h3> Book editing</h3>
+<p> Recent work brought the past experience in editing legal books to a creative level of doing things. Editing book request attention to details, patience but creativity too for appealing book cover designs. I can do all of them.</p><br>
+
+<h3> SEO Audit and implementation : rank performance, backlinking & organic growth </h3>
+<p>Detail-oriented SEO Specialist with over 4 years of experience in optimizing websites for search engines, improving site structure, and boosting organic traffic. Proficient in using SEO tools like Google Analytics, Search Console, Screaming Frog, Ahrefs, and SEMrush. Experienced in technical SEO, including Core Web Vitals, schema markup, and site indexing. Adept at performing keyword research, developing link-building strategies, and reporting on SEO performance. Strong understanding of HTML, CSS, and JavaScript with a commitment to staying updated on the latest SEO trends and best practices. Fluent in English and capable of multitasking in dynamic environments.</p>
+
+</div>
+
+
+<footer>
+  <p>All rights reserved by Alexei. <a href="mailto:chilomalexandra8@gmail.com"><strong>See you in the next project!</strong></a></p>
+</footer>
+</body>
+</html>
